@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Page for testing of fuzzy lib</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Fuzzy testing web page">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./style/index.css"/>
+	</head>
+
+	<body class="">
+		<div class="header">
+			<p>Test page</p>
+		</div>
+		<div class="container1">
+		<div id="div1Id">
+			<p>Test fuzzy library</p>
+			<span>Member function: </span>
+			<select id="selectID" onchange="test.mFType(this)">
+				<option></option>
+				<option>Singelton</option>
+				<option>Gauss</option>
+				<option>Beam</option>
+				<option>Class s</option>
+				<option>Class PI</option>
+				<option>Class Gamma</option>
+				<option>Class t</option>
+				<option>Class L</option>
+				<option>Set</option>
+			</select><br>
+			<p id="infoLine"></p>
+			<p class="inputs c_singl c_singl_c c_gauss c_beam c_s c_pi c_gamma c_t c_L set">x = <input class="c_input" id="xId" type="text"></input></p>
+			<p class="inputs c_singl c_singl_c c_gauss">x_ = <input class="c_input" id="x_Id" type="text"></input></p>
+			<p class="inputs c_gauss">sigma = <input class="c_input" id="sigmaId" type="text"></input></p>
+			<p class="inputs c_beam c_s c_gamma c_t c_L">a = <input class="c_input" type="text"></input></p>
+			<p class="inputs c_beam c_pi c_gamma c_t c_L">b = <input class="c_input" type="text"></input></p>
+			<p class="inputs c_beam c_s c_pi c_t">c = <input class="c_input" type="text"></input></p>
+			<p class="inputs set">A = {(µ(x)/x)}<br><textarea class="c_input" rows="7" cols="30"></textarea></p>
+			<button class="input_btn" onclick="test.getValues()">next</button>
+		</div>
+		<div><p id="result"></p></div>
+		<div id="divSvgId">
+			<svg id="svg" width="400" height="200" viewBox="0 0 400 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+			</svg>
+		</div>
+	</div>
+	<div class="container2">
+		<div id="div2Id">
+			<p>Test fuzzy library</p>
+			<span>Operations on membership functions: </span>
+			<select id="select2ID" onchange="test.operationType(this)">
+				<option></option>
+				<option>Intersection</option>
+				<option>Summ</option>
+			</select><br>
+			<p id="infoLine2"></p>
+			<p class="inputs c_intersection">µ(A) = <input class="c_input" id="aId" type="text"></input></p>
+			<p class="inputs c_intersection">µ(B) = <input class="c_input" id="bId" type="text"></input></p>
+			<button class="input_btn" onclick="test.getValues2()">next</button>
+		</div>
+	</div>
+		<script src="./script/lib/fuzzy/fuzzy.js"></script>
+		<script src="./script/app/app.js"></script>
+	</body>
+</html>
